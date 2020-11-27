@@ -1,0 +1,34 @@
+<ion-header>
+	<ion-toolbar padding-left>
+		<p style="font-weight: bold">Calculador</p>
+		<p>
+			Sua Classificação:
+			<span [style.color]="colorAssociado">
+        {{ classificacao }}
+      </span>
+		</p>
+
+		<p>
+			IMC:
+			<span>
+        {{ imc }}
+      </span>
+		</p>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-item>
+		<ion-label floating>Seu Peso:</ion-label>
+		<ion-input type="number" step="0.1" (ionChange)="calc()" [(ngModel)]="peso">
+		</ion-input>
+	</ion-item>
+
+	<ion-item>
+		<ion-label floating>Sua Altura:</ion-label>
+		<ion-input type="number" step="0.1" (ionChange)="calc()" [(ngModel)]="altura">
+		</ion-input>
+	</ion-item>
+
+
+</ion-content>
